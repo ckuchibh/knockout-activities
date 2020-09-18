@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Day-2 Activities</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            th, td { padding: 10px; border: 1px solid gray; }
+        </style>
+    </head>
+    <body>
+        <h1>Day-2 Activities</h1>
+        <script data-main="scripts/demo_context" src="scripts/require.js"></script>
+
+  <table>
+    <tr>
+      <th>$root</th>
+      <th>$parent</th>
+      <th>$data</th>
+    </tr>
+    <!-- ko template: { name: 'person', data: mainPerson } --><!-- /ko -->
+  </table>
+
+  <script type="text/html" id="person">
+    <tr>
+      <td data-bind="text: $root.name"></td>
+      <td data-bind="text: $parent.name"></td>
+      <td data-bind="text: $data.name"></td>
+    </tr>
+    <!-- ko template: { name: 'person', foreach: children } --><!-- /ko -->
+  </script>
+
+</body>
+</html>
